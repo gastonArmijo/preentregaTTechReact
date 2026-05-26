@@ -1,19 +1,31 @@
 header {
+  background-color:  #171A21;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
+  height: 4rem;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  font-size: 3rem;
+  
 }
-
+.logo-container a{
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: .5rem;
+}
+.logo-container img {
+  height: 3rem;
+}
 .logo-container span {
-    font-family: "Cinzel", serif;
+   font-family: "Cinzel", serif;
     font-weight: 700;
     font-optical-sizing: auto;
     color: #C49A3E;
+    
+    
 }

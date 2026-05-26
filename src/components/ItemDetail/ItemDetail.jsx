@@ -1,9 +1,10 @@
 import {useCart} from "../../context/CartContext";
 import {Item} from "../Item/Item";
 
-export const ItemDetail = () =>{
+export const ItemDetail = ({item}) =>{
     const {addItem} = useCart();
 
+    
     return(
         <Item {...item}>
             <button 

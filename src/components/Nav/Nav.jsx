@@ -1,18 +1,23 @@
 import { Link } from "react-router-dom";
 import "./Nav.css";
+import {useCart} from "../../context/CartContext";
 
 export const Nav = () => {
+    const {getTotalItems} = useCart();
+    const totalItems = getTotalItems()
     return (
         <nav>
             <ul className="nav-list">
                 <li><Link to={"/"}>Home</Link></li>
 
                
-                <li><a href="#resenas">Reseñas</a></li>
-                <li><a href="./contacto.html" >Contacto</a></li>
-                <li><a href="./carrito.html"> carrito<span id="contador-carrito">0</span></a></li>
-
-                <li><Link to={"/carrrito"}>Carrito</Link></li>
+        
+                <li>
+                    <Link to={"/carrito"}>
+                        Carrito
+                        {getTotalItems > 0 && <span className="incart"> {totalItems}</span>}
+                    </Link>
+                </li>
             </ul>
         </nav>
     );
