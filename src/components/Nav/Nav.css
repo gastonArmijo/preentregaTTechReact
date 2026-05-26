@@ -1,0 +1,35 @@
+.nav-list {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+.nav-list li {
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: inherit;
+    color: #909CB8;
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-optical-sizing: auto;
+}
+
+.incart {
+    background-color: red;
+    font-size: 1rem;
+    border-radius: 50%;
+
+    width: 20px;
+    height: 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    font-size: 12px;
+    font-weight: bold;
+}

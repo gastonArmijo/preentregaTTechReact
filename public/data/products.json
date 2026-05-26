@@ -1,0 +1,98 @@
+ [{
+      "id": "1",
+      "name": "Alas de la Resurrección de Shen",
+      "image": "img/AlasDeLaResurreccionDeShen_18.18.png",
+      "price": 18.18,
+      "description": "Forjadas en los antiguos templos de Shen, estas alas místicas simbolizan el renacimiento después de la derrota en las eternas guerras de Dota 2."
+    },
+    {
+      "id": "2",
+      "name": "Alas de las Devociones de Dragonus",
+      "image": "img/AlasDeLasDevocionesDeDragonus_18.11.png",
+      "price": 18.11,
+      "description": "Estas alas sagradas representan el orgullo del imperio Skywrath y el poder celestial de Dragonus en Dota 2."
+    },
+    {
+      "id": "3",
+      "name": "Alma Ígnea de la Asesina",
+      "image": "img/AlmaIgneaDeLaAsesina_20.35.png",
+      "price": 20.35,
+      "description": "Una arcana nacida del fuego y la venganza, utilizada por asesinos letales en las batallas de Dota 2."
+    },
+    {
+      "id": "4",
+      "name": "Alud Gélido",
+      "image": "img/ALudGelido_13.84.png",
+      "price": 13.84,
+      "description": "El poder de las tormentas congeladas del norte vive dentro de esta reliquia ancestral de Dota 2."
+    },
+    {
+      "id": "5",
+      "name": "Brisa Aleteante",
+      "image": "img/BrisaAleteante_99.99.png",
+      "price": 99.99,
+      "description": "Una elegante arcana rodeada de vientos espirituales que anuncian la calma antes de la batalla."
+    },
+    {
+      "id": "6",
+      "name": "Cuernos Fractales del Abismo Interior",
+      "image": "img/CuernosFractalesDelAbismoInterior_33.png",
+      "price": 33,
+      "description": "Cuernos malditos creados en las profundidades del abismo, cargados con energía oscura de Dota 2."
+    },
+    {
+      "id": "7",
+      "name": "El Magus Cypher",
+      "image": "img/ElMagusCypher_27.92.png",
+      "price": 27.92,
+      "description": "Un antiguo artefacto mágico que contiene secretos prohibidos y poder arcano ilimitado."
+    },
+    {
+      "id": "8",
+      "name": "Fiesta de la Abscisión de Aspecto Exaltado",
+      "image": "img/FiestaDeLaAbcisionDeAspectoExaltado_19.83.png",
+      "price": 19.83,
+      "description": "Este cosmético exaltado representa la celebración de la victoria a través de la destrucción."
+    },
+    {
+      "id": "9",
+      "name": "Kingle King",
+      "image": "img/KingleKing_266.23.png",
+      "price": 266.23,
+      "description": "Uno de los objetos más raros y prestigiosos del universo de Dota 2."
+    },
+    {
+      "id": "10",
+      "name": "La Apuesta de Flockheart de Aspecto Exaltado",
+      "image": "img/LaApuestaDeFlockheartDeAspectoExaltado_37.09.png",
+      "price": 37.09,
+      "description": "Inspirada en apuestas arriesgadas y victorias imposibles dentro de Dota 2."
+    },
+    {
+      "id": "11",
+      "name": "Legado de la Hoja de Aspecto Exaltado",
+      "image": "img/LegadoDeLaHojaDeAspectoExaltado_26.82.png",
+      "price": 26.82,
+      "description": "Una espada legendaria que conserva el legado de antiguos héroes caídos en Dota 2."
+    },
+    {
+      "id": "12",
+      "name": "Paradoja Múltiple",
+      "image": "img/ParadojaMultiple_20.62.png",
+      "price": 20.62,
+      "description": "Un artefacto capaz de alterar el tiempo y distorsionar la realidad en el universo de Dota 2."
+    },
+    {
+      "id": "13",
+      "name": "Retribución del Gran Sabio de Aspecto Exaltado",
+      "image": "img/RetribuicionDelGranSabioDeAspectoExaltado_21.50.png",
+      "price": 21.50,
+      "description": "La sabiduría ancestral y el dominio mágico del Gran Sabio viven en esta poderosa arcana."
+    },
+    {
+      "id": "14",
+      "name": "Yelmo de la Tempestad del Dios del Trueno",
+      "image": "img/YelmoDeLaTempestadDelDiosDelTrueno_24.01.png",
+      "price": 24.01,
+      "description": "Un yelmo divino cargado con el poder de tormentas y relámpagos eternos."
+    }]

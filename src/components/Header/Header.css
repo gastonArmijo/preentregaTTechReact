@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.logo-container span {
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-optical-sizing: auto;
+    color: #C49A3E;
+}
