@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
-
 import {ItemList} from "../ItemList/ItemList";
+import { getByCategory, getProducts } from "../../services/ProductsService";
+import { useParams } from "react-router-dom";
 
 export const ItemListContainer = () => {
+    //tomamos category del useParams para poder filtrar
+    const {category} = useParams();
+    
     
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
