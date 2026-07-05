@@ -1,16 +1,16 @@
-const IMBGG_API_KEY = "82846b055d01507acb540c632937d951";
+const IMGBB_API_KEY = "82846b055d01507acb540c632937d951";
 const ENDPOINT = "https://api.imgbb.com/1/upload";
 
-export const UploadImage = async (file) => {
+export const uploadImage = async (file) => {
     const formData = new FormData();
     formData.append("image", file);
 
     try {
-        const response = await fetch(`${ENDPOINT}?key=${IMBGG_API_KEY}`, {
+        const response = await fetch(`${ENDPOINT}?key=${IMGBB_API_KEY}`, {
             method: "POST",
             body: formData,
         });
-        
+
         const data = await response.json();
 
         if (!data.success) {
@@ -18,7 +18,6 @@ export const UploadImage = async (file) => {
         }
 
         return data.data.url;
-
     } catch (error) {
         console.error("Imgbb error:", error);
         throw error;

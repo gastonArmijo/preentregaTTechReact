@@ -6,20 +6,21 @@ import { useParams } from "react-router-dom";
 export const ItemListContainer = () => {
     //tomamos category del useParams para poder filtrar
     const {category} = useParams();
-    
+
     
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("/data/products.json")
-            .then((res) => res.json())
+        setLoading(true);
+        //usamos la funcion con 2 uso: trae todo o filtra si category existe
+        getByCategory(category)
             .then((data) => setProducts(data))
-            .catch((err) => console.log(err))
-            .finally(() =>{
-                setLoading(false);
-            });
-    }, []);
+            .catch((err) => console.log("hubo un error", err))
+            .finally(() => setLoading(false));
+
+        
+    }, [category]);
 
     if(loading) return <p>Cargando...</p>;
 

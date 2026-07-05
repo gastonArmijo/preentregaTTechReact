@@ -6,7 +6,7 @@ import "./Login.css";
 export const Login = () => {
     const {login} = useAuth()
     const navigate = useNavigate()
-    const {formData, setFormData} = useState({
+    const [formData, setFormData] = useState({
         email: "",
         password: "",
     });
