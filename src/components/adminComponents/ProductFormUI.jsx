@@ -29,7 +29,7 @@ export const ProductFormUI = ({
             name="price"
             value={product.price}
             onChange={onChange}
-            placeholder="precio"
+            placeholder=""
             inputMode="decimal"
           />
             {errors.price && <p className="error">{errors.price}</p>}
