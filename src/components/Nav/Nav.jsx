@@ -11,6 +11,9 @@ export const Nav = () => {
                 <li><Link to={"/"}>Home</Link></li>
 
                
+               <li><Link to={"/category/arcana"}>Arcanas</Link></li> 
+               <li><Link to={"/category/inmortales"}>Inmortales</Link></li> 
+               <li><Link to={"/category/tesoros"}>Tesoros</Link></li> 
         
                 <li>
                     <Link to={"/carrito"}>
