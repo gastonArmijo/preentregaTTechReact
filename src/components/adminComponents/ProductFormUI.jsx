@@ -25,13 +25,14 @@ export const ProductFormUI = ({
         <div>
           <label>Precio:</label>
           <input
-            type="number"
+            type="text"
             name="price"
             value={product.price}
             onChange={onChange}
-            min="0"
+            placeholder="precio"
+            inputMode="decimal"
           />
-          {errors.price && <p className="error">{errors.price}</p>}
+            {errors.price && <p className="error">{errors.price}</p>}
         </div>
 
         <div>
