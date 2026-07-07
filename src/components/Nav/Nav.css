@@ -1,35 +1,165 @@
-.nav-list {
-    list-style: none;
+/* ================= NAV ================= */
 
-    display: flex;
-    justify-content: center;
+.nav {
+  display: flex;
 }
+
+.nav-list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 35px;
+
+  margin: 0;
+  padding: 0;
+}
+
 .nav-list li {
-    font-size: 2rem;
-    margin: 0.5rem;
+  margin: 0;
 }
 
 .nav-list a {
-    text-decoration: none;
-    color: inherit;
-    color: #909CB8;
-    font-family: "Cinzel", serif;
-    font-weight: 700;
-    font-optical-sizing: auto;
+  position: relative;
+
+  display: inline-block;
+
+  text-decoration: none;
+
+  color: #909CB8;
+
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+
+  padding: 8px 0;
+
+  transition: color .25s ease;
 }
 
+/* Hover */
+
+.nav-list a:hover {
+  color: #66C0F4;
+}
+
+
+
+.nav-list a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #66C0F4;
+
+  transition: width .25s ease;
+}
+
+.nav-list a:hover::after {
+  width: 100%;
+}
+
+/* Contador carrito */
+
 .incart {
-    background-color: red;
-    font-size: 1rem;
-    border-radius: 50%;
+  background: #C0392B;
+  color: white;
 
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    vertical-align: top;
-    font-size: 12px;
-    font-weight: bold;
+  margin-left: 6px;
+
+  border-radius: 50%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: .75rem;
+  font-weight: bold;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+  .nav{
+
+    position:absolute;
+
+    top:100%;
+    left:0;
+
+    width:100%;
+
+    background:#171A21;
+
+    overflow:hidden;
+
+    max-height:0;
+
+    transition:max-height .3s ease;
+
+    z-index:999;
+  }
+
+  .nav.open{
+    max-height:500px;
+  }
+
+  .nav-list{
+    flex-direction:column;
+    gap:0;
+    width:100%;
+  }
+
+  .nav-list li{
+    width:100%;
+    margin:0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+
+  .nav-list li:last-child{
+    border-bottom:none;
+  }
+
+  .nav-list a{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+
+    padding:18px 0;
+
+    text-align:center;
+
+    transition:background .25s,color .25s;
+  }
+
+  .nav-list a:hover,
+  .nav-list a:active{
+
+    background:#22384B;
+    color:#66C0F4;
+  }
+
+  
+
+  .nav-list a::after{
+    display:none;
+  }
+
 }

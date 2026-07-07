@@ -33,46 +33,48 @@ export const Login = () => {
         }
     }
     return(
-        <form
-            onSubmit={handleSubmit}
-            className="login-form"
-        >
-            <h2>Iniciar sesion</h2>
-
-            <div
-                className="form-group"
+        <div className="login-container">
+            <form
+                onSubmit={handleSubmit}
+                className="login-form"
             >
-                <label>Email</label>
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                />
-            </div>
+                <h2>Iniciar sesion</h2>
 
-            <div
-                className="form-group"
-            >
-                <label>Password</label>
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    value={formData.password}
-                    onChange={handleChange}
-                />
-            </div>
+                <div
+                    className="form-group"
+                >
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                    />
+                </div>
 
-            <button
-                type="submit"
-            >
-                Login
-            </button>
+                <div
+                    className="form-group"
+                >
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        value={formData.password}
+                        onChange={handleChange}
+                    />
+                </div>
+
+                <button
+                    type="submit"
+                >
+                    Login
+                </button>
 
 
-        </form>
+            </form>
+        </div>
     );
     
 };

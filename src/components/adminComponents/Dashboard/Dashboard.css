@@ -1,96 +1,190 @@
-.dashboard {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1.8rem;
-  font-family: Arial, sans-serif;
-  background: #2c2c2c;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  color: #f0f0f0;
+/* ===================== FONDO ===================== */
+
+body {
+  background: #2A475E;
 }
 
-/* ---------------- HEADER ---------------- */
+/* ===================== DASHBOARD ===================== */
+
+.dashboard {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 40px;
+
+  background: #1B2838;
+  color: #ffffff;
+
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* ===================== HEADER ===================== */
 
 .dashboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #444;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.8rem;
+  flex-wrap: wrap;
+  background: #1B2838;
+
+  gap: 20px;
+
+  margin-bottom: 35px;
+  padding-bottom: 20px;
+
+ 
 }
 
 .dashboard-header h2 {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #ffffff;
 }
 
+/* ===================== BOTONES ===================== */
+
 .header-actions {
   display: flex;
-  gap: 0.5rem;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-/* ---------------- ACCIONES ---------------- */
+.header-actions .btn {
+  padding: 12px 18px;
+  border-radius: 8px;
+
+  text-decoration: none;
+  border: none;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: all .25s ease;
+}
+
+.header-actions .primary {
+  background: #66C0F4;
+  color: #1B2838;
+}
+
+.header-actions .primary:hover {
+  background: #8ED5FF;
+  transform: translateY(-2px);
+}
+
+.header-actions .bg-delete {
+  background: #C0392B;
+  color: #fff;
+}
+
+.header-actions .bg-delete:hover {
+  background: #E74C3C;
+}
+
+/* ===================== ACCIONES ===================== */
 
 .dashboard-actions {
-  margin-bottom: 2rem;
-}
-
-.dashboard .action-card.disabled {
-  pointer-events: none;
-  opacity: 0.5;
-  cursor: not-allowed;
+  margin-bottom: 35px;
 }
 
 .dashboard-actions h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 18px;
+  color: #C7D5E0;
 }
 
 .actions-grid {
   display: flex;
-  gap: 1rem;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .action-card {
   flex: 1;
-  padding: 1.5rem;
-  font-size: 1.2rem;
-  text-align: center;
+  min-width: 220px;
+
+  padding: 28px 20px;
+
+  background: #2A475E;
+
+  color: #ffffff;
   text-decoration: none;
+  text-align: center;
+
+  font-size: 1.15rem;
   font-weight: bold;
-  color: #f0f0f0;
-  background: #444;
-  border-radius: 10px;
-  transition:
-    background 0.2s ease,
-    transform 0.1s ease;
+
+  border-radius: 12px;
+  border: 1px solid #3C5D77;
+
+  transition: all .25s ease;
 }
 
 .action-card:hover {
-  background: #5aa3ff;
-  color: #ffffff;
-  transform: translateY(-2px);
+  background: #66C0F4;
+  color: #1B2838;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 10px 20px rgba(0,0,0,.25);
 }
 
-.header-actions button:hover {
-  background-color: #f53c4e;
+.action-card.disabled {
+  pointer-events: none;
+  opacity: .45;
+  cursor: not-allowed;
 }
 
-/* ---------------- AYUDA ---------------- */
+/* ===================== AYUDA ===================== */
 
 .dashboard-help {
-  background: #383838;
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: #ccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background: #22384B;
+
+  padding: 25px;
+
+  border-radius: 12px;
+
+  border: 1px solid #3C5D77;
+
+  color: #C7D5E0;
+
+  line-height: 1.6;
 }
 
 .dashboard-help h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+/* ===================== MOVILE ===================== */
+
+@media (max-width: 768px) {
+
+  .dashboard {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .header-actions .btn,
+  .header-actions button {
+    flex: 1;
+    text-align: center;
+  }
+
+  .actions-grid {
+    flex-direction: column;
+  }
+
 }

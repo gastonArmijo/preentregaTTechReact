@@ -1,129 +1,200 @@
-/* Contenedor del formulario */
+/* ===================== FORMULARIO ===================== */
+
 .product-form {
-  max-width: 720px;
-  margin: 2rem auto;
-  padding: 1.25rem 1.5rem;
-  background: #2c2c2c; /* gris oscuro */
-  color: #f0f0f0; /* texto claro */
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+
+  background: #1B2838;
+  color: #ffffff;
+
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.05);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,.35);
 }
 
-/* Título */
+/* ===================== TITULO ===================== */
+
 .product-form h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.6rem;
-  color: #fff;
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
 }
 
-/* Filas del formulario (tus <div>) */
+/* ===================== CAMPOS ===================== */
+
 .product-form > div {
-  display: grid;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
 }
 
-/* Label + elementos */
 .product-form label {
-  font-size: 0.95rem;
-  color: #ddd;
+  font-size: .95rem;
+  color: #C7D5E0;
+  font-weight: 600;
 }
 
-/* Inputs / textarea */
+/* ===================== INPUTS ===================== */
+
 .product-form input[type="text"],
 .product-form input[type="number"],
 .product-form input[type="file"],
 .product-form textarea {
+
   width: 100%;
-  padding: 0.6rem 0.75rem;
-  border: 1px solid #444;
+
+  padding: 14px 16px;
+
+  background: #2A475E;
+
+  color: #ffffff;
+
+  border: 1px solid #3C5D77;
+
   border-radius: 8px;
-  background: #3a3a3a;
-  color: #f0f0f0;
-  outline: none;
-  transition:
-    border-color 0.15s ease,
-    background 0.15s ease;
+
+  font-size: 1rem;
+
+  transition: .25s;
 }
 
-/* Placeholder más tenue */
-.product-form ::placeholder {
-  color: #aaa;
-}
-
-/* Hover/focus */
-.product-form input[type="text"]:focus,
-.product-form input[type="number"]:focus,
-.product-form input[type="file"]:focus,
-.product-form textarea:focus {
-  border-color: #5aa3ff;
-  background: #353535;
-}
-
-/* Textarea */
 .product-form textarea {
-  min-height: 120px;
+  min-height: 140px;
   resize: vertical;
 }
 
-/* Nota pequeña (tu <small>) */
-.product-form small {
-  color: #bdbdbd;
+.product-form input::placeholder,
+.product-form textarea::placeholder {
+  color: #8FA6B7;
 }
 
-/* Preview de imagen */
-.product-form img {
-  display: block;
-  max-width: 220px;
-  border-radius: 8px;
-  border: 1px solid #444;
-  margin-top: 0.35rem;
+.product-form input:focus,
+.product-form textarea:focus {
+  outline: none;
+  border-color: #66C0F4;
+  box-shadow: 0 0 10px rgba(102,192,244,.35);
 }
 
-/* Botón principal reutilizable */
-.btn-admin {
-  display: inline-block;
-  padding: 0.6rem 1rem;
-  border: none;
-  border-radius: 8px;
-  background: #5aa3ff;
-  color: #0e0e0e;
-  font-weight: 600;
+/* ===================== FILE ===================== */
+
+.product-form input[type="file"] {
   cursor: pointer;
-  transition:
-    transform 0.05s ease,
-    background 0.15s ease,
-    box-shadow 0.15s ease;
 }
 
-.btn:hover {
-  background: #79b6ff;
+.product-form input[type="file"]::file-selector-button {
+
+  background: #66C0F4;
+  color: #1B2838;
+
+  border: none;
+
+  border-radius: 6px;
+
+  padding: 8px 14px;
+
+  margin-right: 12px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: .25s;
 }
-.btn:active {
-  transform: translateY(1px);
+
+.product-form input[type="file"]::file-selector-button:hover {
+  background: #8ED5FF;
 }
-.btn:disabled {
-  opacity: 0.6;
+
+/* ===================== IMAGEN ===================== */
+
+.product-form img {
+  margin-top: 10px;
+  max-width: 220px;
+
+  border-radius: 10px;
+
+  border: 2px solid #3C5D77;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,.25);
+}
+
+/* ===================== TEXTO ===================== */
+
+.product-form small {
+  color: #9EB4C5;
+}
+
+/* ===================== BOTÓN ===================== */
+
+.btn-admin {
+
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #66C0F4;
+
+  color: #1B2838;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all .25s;
+}
+
+.btn-admin:hover {
+  background: #8ED5FF;
+  transform: translateY(-2px);
+}
+
+.btn-admin:active {
+  transform: translateY(0);
+}
+
+.btn-admin:disabled {
+  opacity: .6;
   cursor: not-allowed;
 }
 
-/* Layout responsive (opcional, si más adelante querés dos columnas) */
-@media (min-width: 640px) {
-  .product-form .row-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
+/* ===================== MENSAJES ===================== */
+
+.error {
+  margin-top: 5px;
+  color: #ff7b7b;
+  font-size: .9rem;
 }
 
+/* ===================== PÁGINA DE ÉXITO ===================== */
+
 .success-page {
-  max-width: 720px;
-  margin: 2rem auto;
-  padding: 2rem 1.5rem;
-  background: #2c2c2c;
-  color: #f0f0f0;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  max-width: 700px;
+
+  margin: 50px auto;
+
+  padding: 40px;
+
+  background: #1B2838;
+
+  color: #ffffff;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255,255,255,.05);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,.35);
 
   display: flex;
   flex-direction: column;
@@ -131,24 +202,31 @@
   text-align: center;
 }
 
-/* Ícono grande */
-.success-page .success-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
 }
 
-/* Título */
 .success-page h2 {
-  margin-bottom: 0.5rem;
-  color: #fff;
+  margin-bottom: 15px;
 }
 
-/* Texto secundario */
 .success-page p {
-  color: #bdbdbd;
-  margin-bottom: 1.5rem;
+  color: #C7D5E0;
 }
 
-.error {
-  color: red;
+/* ===================== MOVILE ===================== */
+
+@media (max-width: 768px){
+
+  .product-form{
+    margin:20px;
+    padding:25px;
+  }
+
+  .success-page{
+    margin:20px;
+    padding:25px;
+  }
+
 }
